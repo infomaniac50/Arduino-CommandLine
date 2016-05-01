@@ -180,7 +180,7 @@ bool CommandLine::add(char* command, void (*callback)(char*))
     cmd->command = command;
     cmd->callback = callback;
 
-    this->add(*cmd);
+    return this->add(*cmd);
 }
 
 bool CommandLine::remove(Command& command)
