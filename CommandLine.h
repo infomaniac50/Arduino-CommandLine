@@ -64,7 +64,7 @@ public:
      * @param serial Serial stream to wrap
      * @param token Command line token to indicate new line (e.g. "> ")
      */
-    CommandLine(Stream& serial, char* token);
+    CommandLine(Stream& serial, const char* token);
 
     /**
      * Read the serial stream and evaluate commands.
@@ -144,7 +144,7 @@ private:
         void restore();
     #endif
 
-    char* token;
+    const char* token;
 
     #ifdef COMMANDLINE_PRE_POST
         void (*preCallback)(char*);

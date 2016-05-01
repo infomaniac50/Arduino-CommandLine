@@ -1,6 +1,6 @@
 #include "CommandLine.h"
 
-CommandLine::CommandLine(Stream& _serial, char* _token): serial(_serial), token(_token)
+CommandLine::CommandLine(Stream& _serial, const char* _token): serial(_serial), token(_token)
 {
     input.index = 0;
     commands.index = 0;
